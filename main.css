@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+header {
+    width:100%;
+    text-align:center;
+    background:rgb(146, 146, 146);
+    border: black solid 2px;
+}
+
+.scoreboard{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    flex: 1 1 auto;
+    background-color:rgb(204, 201, 201)
+}
+.scoreboard>div{
+    background-color:grey;
+    border: black solid 3px;
+    width:30%;
+}
+
+.quizArea{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    background-color:grey;
+    border: black solid 2px;
+    height: 600px;
+}
