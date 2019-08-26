@@ -20,14 +20,14 @@
 </header>
 <body>
     <div class="scoreboard">
-        <div class="homeNav">Home</div>
-        <div class="questionCount">Question 1</div>
-        <div class="scoreTotal">Score:1/1</div>
+        <div class="homeNav"><button id="homeButton">Home</button></div>
+        <div class="questionCount">Question: <span id="questionNum">1</span>/10</div>
+        <div class="scoreTotal">Score: <span id="myScore">0</span></div>
     </div>
     
     <div class="quizArea">
-        <form>
-            <a href="./question.html">Start!</a>
+        <form id="quizForm">
+            <button type='button' class='startButton'>Let's Start!</button>
         </form>
     </div>
 </body>
