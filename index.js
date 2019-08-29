@@ -110,10 +110,6 @@ function startQuiz() {
         $('.startButton').remove();
         nextQuestion();
     })
-    
-    //event listener for start button on HTML
-    //iterate through STORE and present first question  
-    //create a separate function to iterate through STORE
 }
 //renders the HTML into the quizArea
 function nextQuestion(){
@@ -122,12 +118,12 @@ function nextQuestion(){
 //returns the HTML for the question and answer inputs
 function onQuestion(){
     return `
-            <span>${STORE[questionCounter].question}</span>
+            <span class = "spanQuestion">${STORE[questionCounter].question}</span>
             <form>
-            <input type="radio" name="answer" value="${STORE[questionCounter].answers[0]}" required>${STORE[questionCounter].answers[0]}<br>
-            <input type="radio" name="answer" value="${STORE[questionCounter].answers[1]}" required>${STORE[questionCounter].answers[1]}<br>
-            <input type="radio" name="answer" value="${STORE[questionCounter].answers[2]}" required>${STORE[questionCounter].answers[2]}<br>
-            <input type="radio" name="answer" value="${STORE[questionCounter].answers[3]}" required>${STORE[questionCounter].answers[3]}<br>
+            <div class = radioDiv><label for="radioA"><input type="radio" name="answer" id="radioA" value="${STORE[questionCounter].answers[0]}" required>${STORE[questionCounter].answers[0]}<br></label></div>
+            <div class = radioDiv><label for="radioB"><input type="radio" name="answer" id="radioB" value="${STORE[questionCounter].answers[1]}" required>${STORE[questionCounter].answers[1]}<br></label></div>
+            <div class = radioDiv><label for="radioC"><input type="radio" name="answer" id="radioC" value="${STORE[questionCounter].answers[2]}" required>${STORE[questionCounter].answers[2]}<br></label></div>
+            <div class = radioDiv><label for="radioD"><input type="radio" name="answer" id="radioD" value="${STORE[questionCounter].answers[3]}" required>${STORE[questionCounter].answers[3]}<br></label></div>
             <button type="submit" id="submit">Submit</button>
             </form>
         `
@@ -141,7 +137,7 @@ function submitAnswer(){
         console.log(userAns);
         if (userAns === STORE[questionCounter].correct){
             correctAnswer();
-        } else incorrectAnswer();
+        } else {incorrectAnswer()};  
     })
 }
 //when correct, add to quizScore and give a nextButton
@@ -173,10 +169,9 @@ function feedbackContinue(){
 //gives final score for quiz
 function quizOver(){    
     $('.quizArea').html(`
-    <span>You've completed the quiz!</span>
-    <span>Your score was ${quizScore}/10</span>
+    <span class="quizEnd">You've completed the quiz!</span>
+    <span class="quizScored">Your score was ${quizScore}/10</span>
     <button type="button" id="restart">Restart?</button>`);
-    
 }
 //reloads page to restart quiz
 function quizRestart(){
@@ -190,7 +185,7 @@ function homeRestart(){
         location.reload();
     })
 }
-
+//essential functions with event listeners
 function pageStart(){
     startQuiz();
     submitAnswer();
@@ -198,5 +193,5 @@ function pageStart(){
     feedbackContinue();
     homeRestart();
 }
-
+//initiate pageStart
 $(pageStart);

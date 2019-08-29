@@ -1,33 +1,136 @@
 *{
     box-sizing: border-box;
 }
-
+body{
+    background: url("./eric-mills-6ysUHAgX8tY-unsplash.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 header {
     width:100%;
     text-align:center;
-    background:rgb(146, 146, 146);
     border: black solid 2px;
+    background: url("./chase-kinney-FMQBLyhD2HU-unsplash.jpg") no-repeat center center fixed grey;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:white;
 }
 
 .scoreboard{
     display:flex;
     flex-direction:row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex: 1 1 auto;
-    background-color:rgb(204, 201, 201)
+    background: rgba(0, 0, 0, 0.65);
+    color:white;
 }
 .scoreboard>div{
-    background-color:grey;
-    border: black solid 3px;
-    width:30%;
+    background: rgba(0, 0, 0, 0.65);
+    border: rgb(56, 55, 55) solid 3px;
+    width:33.3%;
 }
 
 .quizArea{
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:top;
     text-align:center;
-    background-color:grey;
+    color:white;
+    background: url("./victor-freitas-JbI04nYfaJk-unsplash.jpg") no-repeat center center fixed grey;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     border: black solid 2px;
-    height: 600px;
+    height: 1080px;
+}
+
+.spanQuestion{
+    font-size: 40px;
+    color:white;
+    border:black solid 2px;
+    margin-top:5%;
+    margin-left:5%;
+    margin-right:5%;
+    box-sizing:content-box;
+    text-align:top;
+    justify-content:top;
+    background: rgba(0, 0, 0, 0.75)
+}
+
+.quizArea > form{
+    display:flex;
+    flex-direction:column;
+    font-size:25px;
+    text-align:left;
+    justify-content:center;
+    margin-top:2%;
+    margin-left:5%;
+    margin-right:5%;
+    vertical-align:middle;
+    background: rgba(0, 0, 0, 0.90);
+}
+
+form > .radioDiv{
+    color:white;
+    text-align:left;
+    flex: 1 1 0;
+    margin-top:2%;
+    margin-bottom:1%;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    background-color: rgb(49, 31, 94);
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.homeNav{
+    display:flex;
+}
+#homeButton{
+    align-items:center;
+    justify-content:center;
+    background: url("./jesper-aggergaard-KcPmKh9cWlk-unsplash.jpg") no-repeat center center stretch grey;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display:block;
+    width:100%;
+    background:rgba(0,0,0,.55);
+}
+h1{
+    text-align:center;
+}
+p {
+    margin-top:30%;
+    font-size:40px;
+    background:rgba(0,0,0,.75);
+}
+
+.quizEnd{
+    margin-top:30%;
+    background:rgba(0,0,0,.75);
+    font-size:35px;
+}
+.quizScored{
+    background:rgba(0,0,0,.75);
+    font-size:35px;
+}
+.questionCount, .scoreTotal{
+    font-size: 30px;
+    align-items:center;
+    text-align:center;
+    vertical-align:auto;
+    line-height:60px;
 }
